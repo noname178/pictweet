@@ -1,0 +1,8 @@
+  <div class="contents row">
+  <%= form_tag("/tweets/#{params[:id]}", method: :patch) do %>
+    <h3>編集する</h3>
+    <%= text_field_tag :image, @image, placeholder: "Image URL" %>
+    <%= text_area_tag :text, @text, placeholder: "text", cols: 30, rows: 10 %>
+    <%= submit_tag "SENT" %>
+  <% end %>
+  </div>
